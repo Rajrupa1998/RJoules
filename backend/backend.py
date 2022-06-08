@@ -2,7 +2,6 @@ from flask import Flask
 from flask import request
 from flask import Response
 from flask.json import jsonify
-import torch
 
 import json
 
