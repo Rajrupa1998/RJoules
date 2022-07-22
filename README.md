@@ -17,5 +17,5 @@ Have [Python 3.x](https://www.python.org/downloads/) installed in your system.
 2. Navigate to the [issues](https://github.com/iNPUTmice/Conversations/issues) tab to see the issues labeled with energy patterns. 
 
 # Important Links
-1. [Demonstration Video](https://www.youtube.com/watch?v=eLcOIPiGt_g)
+1. [Demonstration Video](https://www.youtube.com/watch?v=hP4pWJ4AKxE)
 2. [Tool Website](https://rishalab.github.io/eTagger/)
