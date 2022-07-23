@@ -11,7 +11,7 @@ function getPatternsForIssues(issues, callback) {
     // console.log(issues)
     // http request to backend
     var xhr = new XMLHttpRequest();  
-    xhr.open("POST", "http://localhost:5000/");  
+    xhr.open("POST", "http://127.0.0.1:5000/");  
     xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
     xhr.setRequestHeader('Content-type', 'application/json');
     xhr.onreadystatechange = function() { 
