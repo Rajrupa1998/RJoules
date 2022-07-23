@@ -69,7 +69,10 @@
                                     The goal of eTagger is to make both the developers and the maintainers of the project aware of the energy efficiency when they take up the issues raised in the project, 
                                     thereby increasing their adoption and making the projects more energy efficient.
                                     </p>
-
+                                    <p style="color: red;">
+                                        <u>Note</u>: The current version of eTagger is developed for <b>Windows</b> and <b>Linux</b> based systems. 
+                                        The tool may have issues on some architectures of macOS 
+                                    </p>
                                     <a href="https://github.com/rishalab/eTagger/archive/main.zip" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download Tool Zip</a>
                                 </div>
                             </section><!--//doc-section-->
@@ -85,15 +88,26 @@
                                         
                                         <p>Clone or download this github repository:</p>
                                         <p><code>git clone https://github.com/rishalab/eTagger.git</code></p>
+                                        <br>
+                                        <h5 id="running-backend">Running the Flask backend</h5>
                                         <p>Navigate into the backend directory:</p>
                                         <p><code>cd backend</code></p>
                                         <p>Install the requirements:</p>
                                         <p><code>pip install -r requirements.txt</code></p>
                                         <p>To start the server use the following command:</p>
                                         <p><code>python backend.py</code></p>
+                                        <br>
+                                        <h5 id="loading-extension">Loading the Chrome extension</h5>
+                                        <p>Select the extensions option in control and customize menu in the Chrome browser</p>
+                                        <p><code>Customize and Control > More Tools > Extensions</code></p>
+                                        <img class="extensions" src="assets/images/demo/extensions_menu.png" alt="extensions menu">
+                                        <br>
+                                        <p>Enable the develper mode, click on load unpacked and select the <b>extension</b> folder</p>
+                                        <img src="assets/images/demo/load_unpacked.png" alt="load unpacked">
+
                                         <!-- <p><strong>Be sure to have CORS disabled on your browser.</strong></p> -->
-                                        <p>Load the extension directory in the Chrome browser in developer mode. 
-                                            <a href="https://developer.chrome.com/docs/extensions/mv3/getstarted/">Instructions for loading</a></p>
+                                        <!-- <p>Load the extension directory in the Chrome browser in developer mode. 
+                                            <a href="https://developer.chrome.com/docs/extensions/mv3/getstarted/">Instructions for loading</a></p> -->
                                         
                                     </div><!--//code-block-->
                                     <h3 class="block-title" id="usage">Usage</h3>
@@ -262,6 +276,8 @@
                                     <nav class="doc-sub-menu nav flex-column">
                                         <a class="nav-link scrollto" href="#requirements">Requirements</a>
                                         <a class="nav-link scrollto" href="#from-github">From Github</a>
+                                        <a class="nav-link scrollto" href="#running-backend">Running the backend</a>
+                                        <a class="nav-link scrollto" href="#loading-extension">Loading the Chrome extension</a>
                                         <a class="nav-link scrollto" href="#usage">Usage</a>
                                     </nav><!--//nav-->
                                     <a class="nav-link scrollto" href="#icons-section">Approach</a>

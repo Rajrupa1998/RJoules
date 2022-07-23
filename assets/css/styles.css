@@ -1556,3 +1556,8 @@ select {
 .screenshot-list {
   list-style: none !important;
 }
+
+.extensions {
+  max-width: 500px;
+  margin: 10px 0px;
+}
