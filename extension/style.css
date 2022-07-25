@@ -3,10 +3,11 @@
     height: 20px;
     border-radius: 12px;
     /* background: purple; */
-    background: red;
+    background: greenyellow;
     /* background: yellowgreen; */
     font-size: 11px;
-    padding: 2px;
+    padding: 0px 5px;
+    border: 2px solid orange;
     text-align: center;
-    color: white;
+    color: black;
 }

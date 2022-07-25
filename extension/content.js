@@ -2,6 +2,7 @@
 var ele = document.querySelectorAll('[id^=issue_]')
 c = 0
 url = "127.0.0.1:5000"
+issuesUrlRegex = /^https:\/\/[www.]?github.com\/[a-zA-Z0-9_]+\/[a-zA-Z0-9_]+\/issues(.*)$/
 
 getLink = (i) => {
     return "https://tqrg.github.io/energy-patterns/#/patterns/" + epLinkHash[i]
@@ -162,9 +163,19 @@ chrome.runtime.onMessage.addListener(
       // listen for messages sent from background.js
       if (request.message === 'changed') {
         console.log(request.url) // new url is now in content scripts!
-        recompute()
+        // check url here
+        if(issuesUrlRegex.test(request.url)){
+            recompute()
+        }
+        // 
       }
   });
-  
+
+// Depricated API. Please change in the future when things stop working
+if(window.performance.navigation.type === 1) {
+    chrome.runtime.sendMessage({message: 'reloaded', url: window.location.href}, () => {
+        console.log('sending reloaded message to background..')
+    })
+}
 
 
