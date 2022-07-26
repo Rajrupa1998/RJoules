@@ -165,6 +165,7 @@ chrome.runtime.onMessage.addListener(
         console.log(request.url) // new url is now in content scripts!
         // check url here
         if(issuesUrlRegex.test(request.url)){
+            document.querySelectorAll('.tag').forEach(e => e.remove())
             recompute()
         }
         // 
