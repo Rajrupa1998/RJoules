@@ -70,8 +70,7 @@
                                     thereby increasing their adoption and making the projects more energy efficient.
                                     </p>
                                     <p style="color: red;">
-                                        <u>Note</u>: The current version of eTagger is developed for <b>Windows</b> and <b>Linux</b> based systems. 
-                                        The tool may have issues on some architectures of macOS 
+                                        <u>Note</u>: The current version of eTagger may have issues on runnning on some architectures of Mac systems.  
                                     </p>
                                     <a href="https://github.com/rishalab/eTagger/archive/main.zip" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download Tool Zip</a>
                                 </div>
@@ -94,6 +93,13 @@
                                         <p><code>cd backend</code></p>
                                         <p>Install the requirements:</p>
                                         <p><code>pip install -r requirements.txt</code></p>
+                                        <p style="color: red;">
+                                            <u>Note</u>: The <a href="https://pypi.org/project/sentence-transformers/">sentence-transformers</a>
+                                            may not get installed on some architectures of Mac systems. In such cases, kindly install the package
+                                            manually with conda (requires conda environment installed) using the following command.
+                                        </p>
+                                        <!-- <br> -->
+                                        <p><code>conda install -c conda-forge sentence-transformers</code></p>
                                         <p>To start the server use the following command:</p>
                                         <p><code>python backend.py</code></p>
                                         <br>
