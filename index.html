@@ -101,23 +101,35 @@
                                     <h3 class="block-title" id="from-github">From Github</h3>
                                     <div class="code-block">
                                         
-                                        <p>Clone or download this github repository:</p>
+                                        <p>STEP1: Clone or download this github repository:</p>
                                         <p><code>git clone https://github.com/rishalab/RJoules.git</code></p>
                                         <br>
-                                        <h5 id="running-backend">Running the Flask backend</h5>
-                                        <p>Navigate into the backend directory:</p>
-                                        <p><code>cd backend</code></p>
-                                        <p>Install the requirements:</p>
-                                        <p><code>pip install -r requirements.txt</code></p>
-                                        <p style="color: red;">
+<!--                                         <h5 id="running-backend">Running the RJoules backend</h5> -->
+                                        <p>STEP2: Navigate into the RJoules_main directory:</p>
+                                        <p><code>cd RJoules_main</code></p>
+					 <p>For testing we have provided few test files here, hence STEP3 to STEP6 can 
+                                        <p>STEP3: Create a R script example. R and Import/source RJoules</p>
+                                        <p><code>source("PATH/energy_measurement.R)</code></p>
+<!--                                         <p style="color: red;">
                                             <u>Note</u>: The <a href="https://pypi.org/project/sentence-transformers/">sentence-transformers</a>
                                             may not get installed on some architectures of Mac systems. In such cases, kindly install the package
                                             manually with conda (requires conda environment installed) using the following command.
-                                        </p>
+                                        </p> -->
                                         <!-- <br> -->
-                                        <p><code>conda install -c conda-forge sentence-transformers</code></p>
-                                        <p>To start the server use the following command:</p>
-                                        <p><code>python backend.py</code></p>
+					 <p>STEP4: Write the code for which energy measurements need to be done inside a function block as below example in example.R.</p>
+                                        <p><code>test_foo<-function(){
+  
+  						print("This is my foo function..")
+  						df <- data.frame("Age" = c(12, 21, 15, 5, 25),
+                   				"Name" = c("Johnny", "Glen", "Alfie","Jack", "Finch"))
+						newdf <- df[order(df$Age), ]
+					        print(newdf)
+							 }
+					</code></p>
+                                        <p>STEP5: Call measure_energy function defined in RJoules with test function name as parameter</p>
+                                        <p><code>measure_energy(test_foo)()</code></p>
+					<p>STEP6: Run example.R in console to get Energy measurements</p>
+                                        <p><code>R<example.R --no-save</code></p>
                                         <br>
                                         <h5 id="loading-extension">Loading the Chrome extension</h5>
                                         <p>Select the extensions option in control and customize menu in the Chrome browser</p>
