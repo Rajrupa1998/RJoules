@@ -105,9 +105,11 @@
                                         <p><code>git clone https://github.com/rishalab/RJoules.git</code></p>
                                         <br>
 <!--                                         <h5 id="running-backend">Running the RJoules backend</h5> -->
-                                        <p>STEP2: Navigate into the RJoules_main directory:</p>
+                                        <p>STEP2: Navigate into the RJoules_main directory, copy the path of energy_measurement.R</p>
                                         <p><code>cd RJoules_main</code></p>
-					    <p>For testing we have provided few test files here<a href=""></a>, hence STEP3 to STEP6 can 
+                                        <p><code>pwd</code></p>
+					    <p>For testing we have provided few test files here<a href=""></a>, hence STEP3 to STEP6 can be avoided, just run the below command</p>
+                        <code>R<testfilename.R</code>
                                         <p>STEP3: Create a R script example. R and Import/source RJoules</p>
                                         <p><code>source("PATH/energy_measurement.R)</code></p>
 <!--                                         <p style="color: red;">
@@ -117,19 +119,20 @@
                                         </p> -->
                                         <!-- <br> -->
 					 <p>STEP4: Write the code for which energy measurements need to be done inside a function block as below example in example.R.</p>
-                                        <p><code>test_foo<-function(){
+                                        <p><code>test_foo<-function(){<br>
   
-  						print("This is my foo function..")
-  						df <- data.frame("Age" = c(12, 21, 15, 5, 25),
-                   				"Name" = c("Johnny", "Glen", "Alfie","Jack", "Finch"))
-						newdf <- df[order(df$Age), ]
-					        print(newdf)
+  						print("This is my foo function..")<br>
+  						df <- data.frame("Age" = c(12, 21, 15, 5, 25), "Name" = c("Johnny", "Glen", "Alfie","Jack", "Finch"))<br>
+						newdf <- df[order(df$Age), ]<br>
+					    print(newdf)<br>
 							 }
 					</code></p>
                                         <p>STEP5: Call measure_energy function defined in RJoules with test function name as parameter</p>
                                         <p><code>measure_energy(test_foo)()</code></p>
 					<p>STEP6: Run example.R in console to get Energy measurements</p>
                                         <p><code>R<example.R --no-save</code></p>
+                                            <p>STEP7: Check the output in output.csv file</p>
+                                            <p><code>vi output.csv</code></p>
                                         <br>
 <!--                                         <h5 id="loading-extension">Loading the Chrome extension</h5>
                                         <p>Select the extensions option in control and customize menu in the Chrome browser</p>
@@ -141,8 +144,8 @@
                                         <p>Once the extension is loaded, enable it and allow it to work in incognito:</p>
                                         <code>Details > Allow in incognito</code> -->
                                         <br>
-                                        <img class="extensions" src="assets/images/demo/plugin.png" alt="plugin">
-                                        <img class="extensions" src="assets/images/demo/allow_incognito.png" alt="plugin">
+                                        <img class="extensions" src="assets/images/demo/code.png" alt="plugin">
+                                        <!-- <img class="extensions" src="assets/images/demo/allow_incognito.png" alt="plugin"> -->
 
                                         <!-- <p><strong>Be sure to have CORS disabled on your browser.</strong></p> -->
                                         <!-- <p>Load the extension directory in the Chrome browser in developer mode. 
@@ -151,30 +154,28 @@
                                     </div><!--//code-block-->
                                     <h3 class="block-title" id="usage">Usage</h3>
                                     <div class="code-block">
-                                        <p>Navigate to an Android project repository on Github.</p>
-                                        <p>Ex: <a href="https://github.com/iNPUTmice/Conversations">iNPUTmice/Conversations</a></p>
-                                        <p>Navigate to the Issues tab to see the issues labeled with energy patterns.</p>
-                                        <img src="assets/images/demo/isssues_tab.png" alt="issues tab">
+                                        <p>Measuring energy consumption due to R code snippets.</p>
+                                        <!-- <p>Ex: <a href="https://github.com/iNPUTmice/Conversations">iNPUTmice/Conversations</a></p> -->
+                                        <p>Check energy consumption of machine learning models developed in R </p>
+                                        <!-- <img src="assets/images/demo/isssues_tab.png" alt="issues tab"> -->
                                     </div>
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
                             <section id="icons-section" class="doc-section">
                                 <h2 class="section-title">Approach diagram</h2>
                                 <div class="section-block">
-                                    <ul>
-                                        <li>
-                                            <strong>Generation of Labels</strong>
+                                    <!-- <ul> -->
+                                        <!-- <li> -->
+                                            <!-- <strong>Generation of Labels</strong> -->
                                             <p>
-                                                eTagger uses the cosine similarity metric of the issue text and the energy pattern 
-                                                description to find out the labels associated with the issue. For the sake of providing a 
-                                                better UX, the number of labels are capped at 3. 
+                                                RJoules uses intel-RAPL interface to measure energy consumption. The tool is developed for getting package and dram domain energy consumption due to R code snippet. The internal workflow is described in the below figure.
                                             </p>
                                             <img class="img-fluid" src="assets/images/demo/eTagger_approach_2.png" alt="elegant icons" />
                                             <br>
-                                        </li>
+                                        <!-- </li> -->
                                         <div style="height: 20px;"></div>
                                         <li>
-                                            <strong>Working of Extension</strong>
+                                            <!-- <strong>Working of Extension</strong>
                                             <p>
                                                 The approach of labeling described in the previous step is deployed on a local server using the Flask web framework. 
                                                 The extension monitors the browser forload of GitHub issues page. 
@@ -186,8 +187,8 @@
                                             </p>
                                             <img class="img-fluid" src="assets/images/demo/eTagger_extension.png" alt="elegant icons" />
                                             <br>
-                                        </li>
-                                    </ul>
+                                        </li> -->
+                                    <!-- </ul> -->
 
                                 
                             </section>
@@ -229,10 +230,10 @@
                                 <div class="section-block">
                                     <ul>
                                         <li>
-                                            Make the developers aware of energy patterns in their projects. 
+                                            Measuring energy consumption due to R code snippets.
                                         </li>
                                         <li>
-                                            Help in driving the Android projects towards energy efficient development.
+                                            Check energy consumption of machine learning models developed in R 
                                         </li>
                         
                    
@@ -270,8 +271,8 @@
 			<section id="result-section" class="doc-section">
                                 <h2 class="section-title">Results</h2>
                                 <div class="section-block">
-                                    The evaluation process contained a set of 217 issues of which 124 were related to energy consumption. 
-                                    <strong><a href="https://github.com/rishalab/eTagger/tree/main/evaluation">Results</a></strong>
+                                    The evaluation experiments have been done on 3 systems of different configurations considering 4 machine learning algorithms. 
+                                    <strong><a href="https://github.com/rishalab/RJoules/tree/main/evaluation">Results</a></strong>
                                     
                                     
                                 </div>
@@ -346,7 +347,7 @@
                         <div class="content-holder-inner">
                             <div class="desc">
                                 <h3 class="promo-title">Contributors</h3>
-                                <p> Shriram Shanbhag, Sridhar Chimalakonda, Vibhu Saujanya Sharma, Vikrant Kaulgud </p>
+                                <p> Rajrupa chattaraj, Sridhar Chimalakonda</p>
                                 <!-- <a class="btn btn-cta" href="" target="_blank"><i class="fas fa-external-link-alt"></i> Preprint</a> -->
                             </div><!--//desc-->
                         </div><!--//content-holder-inner-->
