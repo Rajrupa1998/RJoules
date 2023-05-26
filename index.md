@@ -1,4 +1,4 @@
-### eTagger - Watch Out for Energy Patterns! Towards TaggingEnergy Sensitive GitHub Issues
+### RJoules - An Energy Measurement Tool for R Language
 
 <!-- You can use the [editor on GitHub](https://github.com/tritims/eTagger/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
@@ -39,4 +39,4 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
  
  ## Tool Description
  
-eTagger is a Chrome extension that labels energy sensitive issues from Android projects on GitHub with energy patterns associated with the issue. The goal of eTagger is to make both the developers and the maintainers of the project aware of the energy efficiency when they take up the issues raised in the project, thereby increasing their adoption and making the projects more energy efficient.
+RJoules measures the energy consumption of R code snippeton Intel processor and provides domain-level granular results. This tool can be serves as a valuable resource for developers and practitioners seeking to develop energy-aware applications using the R languaguage,
