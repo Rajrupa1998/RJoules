@@ -108,8 +108,9 @@
                                         <p>STEP2: Navigate into the RJoules_main directory, copy the path of energy_measurement.R</p>
                                         <p><code>cd RJoules_main</code></p>
                                         <p><code>pwd</code></p>
-					    <p>For testing we have provided few test files here<a href=""></a>, hence STEP3 to STEP6 can be avoided, just run the below command</p>
-                        <code>R<testfilename.R</code>
+					                    <p>For testing we have provided few test files here<a href=""></a>, hence STEP3 to STEP6 can be avoided. Take any of the test file and add the copied path in source.
+                                        For checking the energy consumption due to the code snippet present in the test file, run the below command</p>
+                                        <code>R\<testfilename.R</code>
                                         <p>STEP3: Create a R script example. R and Import/source RJoules</p>
                                         <p><code>source("PATH/energy_measurement.R)</code></p>
 <!--                                         <p style="color: red;">
@@ -118,18 +119,18 @@
                                             manually with conda (requires conda environment installed) using the following command.
                                         </p> -->
                                         <!-- <br> -->
-					 <p>STEP4: Write the code for which energy measurements need to be done inside a function block as below example in example.R.</p>
+					                    <p>STEP4: Write the code for which energy measurements need to be done inside a function block as below example in example.R.</p>
                                         <p><code>test_foo<-function(){<br>
   
-  						print("This is my foo function..")<br>
-  						df <- data.frame("Age" = c(12, 21, 15, 5, 25), "Name" = c("Johnny", "Glen", "Alfie","Jack", "Finch"))<br>
-						newdf <- df[order(df$Age), ]<br>
-					    print(newdf)<br>
-							 }
-					</code></p>
+  						                print("This is my foo function..")<br>
+  						                df <- data.frame("Age" = c(12, 21, 15, 5, 25), "Name" = c("Johnny", "Glen", "Alfie","Jack", "Finch"))<br>
+						                newdf <- df[order(df$Age), ]<br>
+					                    print(newdf)<br>
+							            }
+					                    </code></p>
                                         <p>STEP5: Call measure_energy function defined in RJoules with test function name as parameter</p>
                                         <p><code>measure_energy(test_foo)()</code></p>
-					<p>STEP6: Run example.R in console to get Energy measurements</p>
+					                    <p>STEP6: Run example.R in console to get Energy measurements</p>
                                         <p><code>R<example.R --no-save</code></p>
                                             <p>STEP7: Check the output in output.csv file</p>
                                             <p><code>vi output.csv</code></p>
