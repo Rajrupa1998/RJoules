@@ -1,5 +1,5 @@
 # RJoules
-Towards Energy Efficient R Programming
+Towards Developing Energy Efficient R Programming
 # Description
 RJoules measures the energy consumption of R code snippeton Intel processor and provides domain-level granular results. This tool can be serves as a valuable resource for developers and practitioners seeking to develop energy-aware applications using the R languaguage. 
 
