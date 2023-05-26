@@ -1,18 +1,18 @@
 # Please follow the below steps before executing the evaluation script: test_models.R
 
-# Step1
+### Step1
 Mention the correct absolute path for below two lines in test_models.R(Importing RJoules and dataset(spam.csv)) 
 ```source("PATH/energy_measurement.R")``` 
 ```dataset1<-read.csv("PATH/spam.csv", stringsAsFactors=T, check.names=F)```
-# Step2: 
+### Step2: 
 Save the libpath.sh in the same directory as test_models.R It is responsible for making a directory where we’ll install required libraries for machine learning algorithms 
-# Step3: 
+### Step3: 
 Making libpath.sh executable.  ```chmod u+x libPath.sh```
-# Step4: 
+### Step4: 
 Run it with command ```./libPath.sh```
-# Step5: 
+### Step5: 
 Run test_models.R to measure energy for machine learning algorithms. ```R<test_models.R --no-save```
-# Step6: 
+### Step6: 
 Check the output ```vi output.csv```
 
 ## Note: 
