@@ -1,7 +1,7 @@
 # Please follow the below steps before executing the evaluation script: test_models.R
 
 # Step1
-Mention the correct absolute path for below two lines in test_models.R(Importing RJoules and dataset) 
+Mention the correct absolute path for below two lines in test_models.R(Importing RJoules and dataset(spam.csv)) 
 ```source("PATH/energy_measurement.R")``` 
 ```dataset1<-read.csv("PATH/spam.csv", stringsAsFactors=T, check.names=F)```
 # Step2: 
